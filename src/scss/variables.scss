@@ -1,0 +1,21 @@
+/****** Colors ********/
+$primary: #304ffd;
+$secondary: red;
+$success: green;
+$warning: yellow;
+$danger: #f98076;
+$black: black;
+$white: white;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  warning: $warning,
+  danger: $danger,
+  black: $black,
+  white: $white,
+);
+
+/******* Border ************/
+$radius: 12pt;
