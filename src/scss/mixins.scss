@@ -1,3 +1,7 @@
 @function getColor($color, $opacity: 1) {
   @return rgba($color, $opacity);
 }
+
+@function getShadow($color, $opacity: 0.3) {
+  @return 0 5px 18px 0 rgba($color, $opacity);
+}
