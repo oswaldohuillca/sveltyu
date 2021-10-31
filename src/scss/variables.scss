@@ -1,10 +1,10 @@
 /****** Colors ********/
-$primary: #304ffd;
+$primary: rgb(26, 92, 255);
 $secondary: red;
-$success: green;
-$warning: yellow;
-$danger: #f98076;
-$black: black;
+$success: rgb(23, 201, 100);
+$warning: rgb(255, 186, 0);
+$danger: rgb(242, 19, 93);
+$black: rgb(36, 33, 69);
 $white: white;
 
 $colors: (
@@ -18,4 +18,8 @@ $colors: (
 );
 
 /******* Border ************/
-$radius: 12pt;
+$border-radius: 10pt;
+
+/************** Fonts *********/
+$font-family: 'Poppins';
+$font-size: 13px;

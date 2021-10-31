@@ -8,7 +8,7 @@
   @import '../../scss/main.scss';
 
   .card {
-    border-radius: $radius;
+    border-radius: $border-radius;
     background: $white;
   }
 </style>

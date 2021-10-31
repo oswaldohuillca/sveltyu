@@ -8,10 +8,12 @@
     | 'black'
     | 'white' = 'primary';
 
+  export let click: svelte.JSX.MouseEventHandler<HTMLButtonElement>;
+
   let ripples = [];
+  let btn = null;
 
   const handleClick = (e) => {
-    console.log(e.clientX, e.clientY);
     let pos = btn.getBoundingClientRect();
     ripples = [
       ...ripples,
@@ -21,25 +23,15 @@
         show: true,
       },
     ];
-
-    console.log(ripples);
-  };
-
-  let btn = null;
-
-  const animateRipple = (e) => {
-    let el = this.$refs.tiBtn;
-    let pos = el.getBoundingClientRect();
-
-    this.ripples.push({
-      x: e.clientX - pos.left,
-      y: e.clientY - pos.top,
-      show: true,
-    });
   };
 </script>
 
-<button bind:this={btn} class="btn btn-{color}" on:click={handleClick}>
+<button
+  bind:this={btn}
+  class="btn btn-{color}"
+  on:click={handleClick}
+  on:click={click}
+>
   {#each ripples as val, i}
     {#if val.show == true}
       <span class="waves" style="top:{val.y}px; left:{val.x}px" />
@@ -84,12 +76,22 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    font-size: $font-size;
     @each $i, $color in $colors {
-      &.btn-#{$i} {
-        padding: 0.8rem 1.5em;
+      &.btn-#{'' + $i} {
+        padding: 8px 12px;
         background: $color;
-        color: $white;
-        border-radius: $radius;
+        @if $i == white {
+          color: $black;
+        } @else {
+          color: $white;
+        }
+        border-radius: $border-radius;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px -10px rgba($color, 1);
+        }
       }
     }
     &:active {
@@ -102,7 +104,7 @@
       position: absolute;
       border-radius: 50%;
       transform: translateX(-100%) translateY(-100%);
-      mix-blend-mode: screen;
+      mix-blend-mode: normal;
       animation: ripple 1250ms ease-out forwards, fade 1500ms ease-out forwards;
     }
   }
