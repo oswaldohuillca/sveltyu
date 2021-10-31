@@ -12,13 +12,17 @@
 <main>
   <h1>Hello {name}!</h1>
   <YuButton click={handleclick}>primary</YuButton>
-  <YuButton click={handleclick} color="success">success</YuButton>
+  <YuButton click={handleclick} color="success" iconStart icon="favorite">
+    success
+  </YuButton>
   <YuButton click={handleclick} color="secondary">secondary</YuButton>
   <YuButton click={handleclick} color="warning">warning</YuButton>
-  <YuButton click={handleclick} color="danger">danger</YuButton>
+  <YuButton click={handleclick} color="danger" iconEnd icon="shopping_cart"
+    >danger</YuButton
+  >
   <YuButton click={handleclick} color="black">black</YuButton>
-  <YuButton click={handleclick} color="black">
-    <span class="material-icons"> credit_card </span>
+  <YuButton click={handleclick} color="black" isIcon>
+    <span class="material-icons"> favorite </span>
   </YuButton>
   <YuButton click={handleclick} color="white">white</YuButton>
   <YuCard>card</YuCard>

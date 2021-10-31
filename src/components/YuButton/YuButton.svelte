@@ -7,6 +7,10 @@
     | 'danger'
     | 'black'
     | 'white' = 'primary';
+  export let icon: string = null;
+  export let isIcon: boolean = false;
+  export let iconStart: boolean = false;
+  export let iconEnd: boolean = false;
 
   export let click: svelte.JSX.MouseEventHandler<HTMLButtonElement>;
 
@@ -28,7 +32,7 @@
 
 <button
   bind:this={btn}
-  class="btn btn-{color}"
+  class="btn btn-{color} is-{isIcon && 'icon'}"
   on:click={handleClick}
   on:click={click}
 >
@@ -37,7 +41,17 @@
       <span class="waves" style="top:{val.y}px; left:{val.x}px" />
     {/if}
   {/each}
+  {#if iconStart}
+    <span class="material-icons btn-icon" style="margin-right: 4px;">
+      {icon}
+    </span>
+  {/if}
   <slot />
+  {#if iconEnd}
+    <span class="material-icons btn-icon" style="margin-left: 4px;">
+      {icon}
+    </span>
+  {/if}
 </button>
 
 <style lang="scss">
@@ -91,6 +105,12 @@
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 10px 20px -10px rgba($color, 1);
+        }
+        &.is-icon {
+          padding: $padding;
+        }
+        .btn-icon {
+          font-size: 15px !important;
         }
       }
     }
