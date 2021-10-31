@@ -2,6 +2,7 @@
   import YuAlert from './components/YuAlert/YuAlert.svelte';
   import YuButton from './components/YuButton/YuButton.svelte';
   import YuCard from './components/YuCard/YuCard.svelte';
+  import YuTypography from './components/YuTypography/YuTypography.svelte';
 
   export let name: string;
   function handleclick(e) {
@@ -17,16 +18,27 @@
   </YuButton>
   <YuButton click={handleclick} color="secondary">secondary</YuButton>
   <YuButton click={handleclick} color="warning">warning</YuButton>
-  <YuButton click={handleclick} color="danger" iconEnd icon="shopping_cart"
-    >danger</YuButton
-  >
+  <YuButton click={handleclick} color="danger" iconEnd icon="shopping_cart">
+    danger
+  </YuButton>
   <YuButton click={handleclick} color="black">black</YuButton>
   <YuButton click={handleclick} color="black" isIcon>
     <span class="material-icons"> favorite </span>
   </YuButton>
   <YuButton click={handleclick} color="white">white</YuButton>
   <YuCard>card</YuCard>
-  <YuAlert>hola como estan</YuAlert>
+  <YuAlert>
+    <YuTypography component="h6">Title de title ?</YuTypography>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quis pariatur
+    in natus tempore rem, nobis eum tenetur maiores illum odio deserunt, officia
+    dicta eligendi? Labore ipsa sunt fugiat voluptas! Illum qui quod ab quisquam
+    tempora ad cupiditate facilis fugit exercitationem corporis unde quos quis nihil
+    et distinctio, obcaecati reiciendis commodi doloremque eos. Doloremque rerum
+    animi dicta ex magnam excepturi! Mollitia, recusandae dolores. Libero unde, eum
+    beatae veritatis ullam maiores doloremque animi. Quo mollitia veritatis ex odit
+    voluptatibus non quos, assumenda eaque accusantium, excepturi iste voluptatem
+    nihil distinctio, tenetur recusandae!
+  </YuAlert>
   <YuAlert color="danger">hola como estan</YuAlert>
   <YuAlert color="warning">hola como estan</YuAlert>
 </main>
