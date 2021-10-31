@@ -2,6 +2,7 @@
   import YuAlert from './components/YuAlert/YuAlert.svelte';
   import YuButton from './components/YuButton/YuButton.svelte';
   import YuCard from './components/YuCard/YuCard.svelte';
+  import YuInput from './components/YuInput/YuInput.svelte';
   import YuTypography from './components/YuTypography/YuTypography.svelte';
 
   export let name: string;
@@ -41,6 +42,10 @@
   </YuAlert>
   <YuAlert color="danger">hola como estan</YuAlert>
   <YuAlert color="warning">hola como estan</YuAlert>
+  <YuInput iconStart="favorite" iconEnd="phone" />
+  <YuInput color="success" iconStart="phone" />
+  <YuInput color="primary" iconStart="mail" />
+  <YuInput color="danger" iconStart="person" placeholder="Usuario" />
 </main>
 
 <style>
@@ -54,7 +59,7 @@
     font-weight: 100;
   }
   :global(.material-icons) {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 
   @media (min-width: 640px) {

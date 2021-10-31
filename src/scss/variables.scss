@@ -1,11 +1,11 @@
 /****** Colors ********/
-$primary: rgb(26, 92, 255);
+$primary: rgb(25, 91, 255);
 $secondary: red;
-$success: rgb(23, 201, 100);
+$success: rgb(70, 201, 58);
 $warning: rgb(255, 186, 0);
-$danger: rgb(242, 19, 93);
-$black: rgb(36, 33, 69);
-$white: white;
+$danger: rgb(255, 71, 87);
+$black: rgb(30, 30, 30);
+$white: rgb(244, 247, 248);
 
 $colors: (
   primary: $primary,
@@ -16,6 +16,10 @@ $colors: (
   black: $black,
   white: $white,
 );
+
+/*************General **********/
+$icon-heigh: 30px;
+$icon-width: 30px;
 
 /************** Epacer *********/
 $padding: 8px;

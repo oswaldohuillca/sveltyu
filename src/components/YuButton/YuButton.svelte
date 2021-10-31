@@ -55,7 +55,7 @@
 </button>
 
 <style lang="scss">
-  @import '../../scss/variables.scss';
+  @import '../../scss/main.scss';
 
   @keyframes ripple {
     0% {
