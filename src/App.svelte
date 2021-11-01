@@ -2,6 +2,8 @@
   import YuAlert from './components/YuAlert/YuAlert.svelte';
   import YuButton from './components/YuButton/YuButton.svelte';
   import YuCard from './components/YuCard/YuCard.svelte';
+  import YuGrid from './components/YuGrid/YuGrid.svelte';
+  import YuGridItem from './components/YuGrid/YuGridItem.svelte';
   import YuInput from './components/YuInput/YuInput.svelte';
   import YuTypography from './components/YuTypography/YuTypography.svelte';
 
@@ -46,6 +48,13 @@
   <YuInput color="success" iconStart="phone" />
   <YuInput color="primary" iconStart="mail" />
   <YuInput color="danger" iconStart="person" placeholder="Usuario" />
+  <YuGrid gap={10} colums={10}>
+    <YuGridItem xs={10} sm={4} md={8} lg={3} xlg={2}>Item</YuGridItem>
+    <div>asdas</div>
+    <div>asdas</div>
+    <div>asdas</div>
+    <div>asdas</div>
+  </YuGrid>
 </main>
 
 <style>
