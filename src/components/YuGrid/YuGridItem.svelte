@@ -38,9 +38,4 @@
       }
     }
   }
-  @for $i from 0 through 20 {
-    .col-span-#{$i} {
-      grid-column: span $i/span $i;
-    }
-  }
 </style>
