@@ -5,12 +5,14 @@
   import YuGrid from './components/YuGrid/YuGrid.svelte';
   import YuGridItem from './components/YuGrid/YuGridItem.svelte';
   import YuInput from './components/YuInput/YuInput.svelte';
+  import YuSwitch from './components/YuSwitch/YuSwitch.svelte';
   import YuTypography from './components/YuTypography/YuTypography.svelte';
 
   export let name: string;
   function handleclick(e) {
     console.log(e.target);
   }
+  let acceptTerms = false;
 </script>
 
 <main>
@@ -53,7 +55,9 @@
     <div>asdas</div>
     <div>asdas</div>
     <div>asdas</div>
-    <div>asdas</div>
+    <div>
+      <YuSwitch bind:checked={acceptTerms} color="danger" />
+    </div>
   </YuGrid>
 </main>
 
