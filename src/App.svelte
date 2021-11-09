@@ -56,7 +56,12 @@
     <div>asdas</div>
     <div>asdas</div>
     <div>
-      <YuSwitch bind:checked={acceptTerms} color="danger" />
+      <YuSwitch
+        bind:checked={acceptTerms}
+        color="danger"
+        iconBefore="favorite"
+        label="hol"
+      />
     </div>
   </YuGrid>
 </main>
