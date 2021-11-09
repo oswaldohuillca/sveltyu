@@ -63,6 +63,7 @@
       transition: all 0.4s ease;
       border-radius: 50%;
       cursor: pointer;
+      box-shadow: 0 10px 20px -10px rgba($black, 1);
       &.active {
         transform: translateX(calc(58px - 28px));
       }
