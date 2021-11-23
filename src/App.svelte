@@ -2,6 +2,7 @@
   import YuAlert from './components/YuAlert/YuAlert.svelte';
   import YuButton from './components/YuButton/YuButton.svelte';
   import YuCard from './components/YuCard/YuCard.svelte';
+  import YuCheckBox from './components/YuCheckBox/YuCheckBox.svelte';
   import YuGrid from './components/YuGrid/YuGrid.svelte';
   import YuGridItem from './components/YuGrid/YuGridItem.svelte';
   import YuInput from './components/YuInput/YuInput.svelte';
@@ -69,6 +70,9 @@
     </YuGridItem>
     <YuGridItem xs={1}>
       <YuSwitch bind:checked={acceptTerms} color="black" />
+    </YuGridItem>
+    <YuGridItem xs={1}>
+      <YuCheckBox />
     </YuGridItem>
   </YuGrid>
 </main>
